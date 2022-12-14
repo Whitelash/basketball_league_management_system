@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{% block title %} {{player.player_name}} {% endblock %}
+
+{% block image_block %}
+  <header class="info-header">
+    <div id="page-intro" class="container-fluid d-flex align-items-center justify-content-center ">
+      <div class="row d-flex justify-content-center text-center">
+        <div class="col-md-10 text-white">
+          <!-- heading -->
+          <h2 class="display-4 font-weight-bold  p-5 " style="color:#fbfffd;" > Teams </h2>
+          <div class="row d-flex justify-content-center text-center">
+            <ul class="breadcrumb">
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="{% url 'league:level_list' %}">League</a></li>
+              <li class="disabled-text" >{{team.team_name}}</li>
+            </ul>
+          </div>
+
+          <!-- divider -->
+          <hr style="color:#008e6d;">
+
+          <!-- description -->
+          <h4 class="white-text my-4">Get to see the stats of each of the players.</h4>
+    </div>
+  </header>
+  {% endblock %}
+
+{% block content %}
+
+{% endblock %}
